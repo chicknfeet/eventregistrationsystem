@@ -232,7 +232,7 @@
 
             <thead>
                 <tr>
-                    <th>Event Id</th>
+                    <th>Id</th>
                     <th>Event Name</th>
                     <th>Date</th>
                     <th>Location</th>
