@@ -197,22 +197,16 @@
         
     </style>
 
-    <h1>Event List</h1>
+    <h1>Attendees List</h1>
     
     <div>
 
         <div class="row">
-            <form action="{{route('saveEvents')}}" method="post">
+            <form action="{{route('saveAttendees')}}" method="post">
                 @csrf
 
-                <label for="EventName" class="col"></label>
-                <input class="inputs" type="text" name="EventName" placeholder="Event Name">
-
-                <label for="Date" class="col"></label>
-                <input class="inputs" type="date" name="Date">
-
-                <label for="Location" class="col"></label>
-                <input class="inputs" type="text" name="Location" placeholder="Location">
+                <label for="Attendee" class="col"></label>
+                <input class="inputs" type="text" name="Attendee" placeholder="Attendee">
 
                 <div class="col">
                     <button class="add">
@@ -242,21 +236,17 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Event Name</th>
-                    <th>Date</th>
-                    <th>Location</th>
+                    <th>Attendees</th>
                 </tr>   
             </thead>
             
             <tbody>
-                @foreach($events as $event)
+                @foreach($attendees as $attendee)
                     <tr>
-                        <td>{{ $event->Id }}</td>
-                        <td>{{ $event->EventName }}</td>
-                        <td>{{ $event->Date }}</td>
-                        <td>{{ $event->Location }}</td>
+                        <td>{{ $attendee->Id }}</td>
+                        <td>{{ $attendee->Attendee }}</td>
                         <td>
-                            <a href="{{route('updateEvents', $event->id)}}">
+                            <a href="{{route('updateAttendees', $attendee->id)}}">
                                 <button class="Btn">Edit 
                                     <svg class="svg" viewBox="0 0 512 512">
                                         <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
@@ -266,7 +256,7 @@
                         </td>
 
                         <td>
-                            <a href="{{route('removeEvents', $event->id)}}">
+                            <a href="{{route('removeAttendees', $attendee->id)}}">
                                 <button class="button" type="button">
                                     <span class="button__text">Delete</span>
                                     <span class="button__icon"><svg class="svg1" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><title></title><path d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" x1="80" x2="432" y1="112" y2="112"></line><path d="M192,112V72h0a23.93,23.93,0,0,1,24-24h80a23.93,23.93,0,0,1,24,24h0v40" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="256" x2="256" y1="176" y2="400"></line><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="184" x2="192" y1="176" y2="400"></line><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="328" x2="320" y1="176" y2="400"></line></svg></span>
@@ -286,5 +276,5 @@
 @endsection
 
 @section('title')
-    Event Page
+    Attendee Page
 @endsection

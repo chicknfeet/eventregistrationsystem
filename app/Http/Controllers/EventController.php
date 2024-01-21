@@ -17,7 +17,6 @@ class EventController extends Controller
             'EventName' => 'required|string|max:500',
             'Date' => 'required|string|max:500',
             'Location' => 'required|string|max:500',
-            'Attendees' => 'required|string|max:500',
         ]);
         Event::create($validatedData);
         return back();
@@ -39,7 +38,6 @@ class EventController extends Controller
         $event->EventName = $request->update_event_name;
         $event->Date = $request->update_date;
         $event->Location = $request->update_location;
-        $event->Attendees = $request->update_attendees;
         $event->save();
         return redirect()->route('event');
     }

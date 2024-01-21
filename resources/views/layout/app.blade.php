@@ -61,6 +61,14 @@
         width: 70%;
     }
 
+    #navs{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+    }
+
     .logo{
         padding-left: 3rem;
         color: #F86F03;
@@ -70,16 +78,20 @@
 
 <body>
     <header>
-        <nav>
-            <div class="logo"></div>
+        <nav id="navs">
+            <div class="logo">ERS</div>
             <div class="nav">
                 <ul>
+                    <li><a href="{{ route('landing') }}">Home</a></li>
                     <li><a href="{{ route('event') }}">Events</a></li>
+                    <li><a href="{{ route('attendee') }}">Attendees</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     @yield('content')
+
+    
 </body>
 </html>

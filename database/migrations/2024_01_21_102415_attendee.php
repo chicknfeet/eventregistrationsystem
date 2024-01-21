@@ -12,11 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('attendees', function (Blueprint $table) {
             $table->id();
-            $table->string('EventName');
-            $table->integer('Date');
-            $table->string('Location');
+            $table->string('Attendee');
             $table->timestamps();
         });
     }
