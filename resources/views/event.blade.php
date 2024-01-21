@@ -279,8 +279,10 @@
         </table>
     </div>
 
+    <br>
+
     <footer>
-        <div id="credits" class="table-dark">© Carl Angelo Matais Maniangap</div>
+        <div id="credits" class="table-dark">© Carl Angelo Matias Maniangap</div>
     </footer>
 
 @endsection

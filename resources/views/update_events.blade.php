@@ -56,9 +56,21 @@
             }
         }
 
+        #credits{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            font-family: Garamond;
+        }
+
     </style>
 
-    <div class="card my-4">
+    <div class="card">
         <form action="{{route('saveUpdatedEvents', $event->id)}}" method="POST">
             @csrf
             @method('PUT')
@@ -103,6 +115,10 @@
             </div>
         </form>
     </div>
+
+    <footer>
+        <div id="credits" class="table-dark">© Carl Angelo Matias Maniangap</div>
+    </footer>
 
 @endsection
 
